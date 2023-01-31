@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zh <zshahin@student.42wolfsburg.de>        +#+  +:+       +#+        */
+/*   By: zeyad <zeyad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 17:33:45 by zh                #+#    #+#             */
-/*   Updated: 2022/12/22 22:52:59 by zh               ###   ########.fr       */
+/*   Updated: 2023/01/31 15:52:56 by zeyad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 #include <stdio.h>
 
-void	ft_lstdel(int fd, tt_list **lst)
+void	ft_lstdel(int fd, t_tlist **lst)
 {
-	tt_list	*temp;
-	tt_list	*current;
+	t_tlist	*temp;
+	t_tlist	*current;
 
 	if ((*lst)->fd == fd)
 	{
@@ -40,11 +40,11 @@ void	ft_lstdel(int fd, tt_list **lst)
 	}
 }
 
-tt_list	*ft_lstnw(void *content)
+t_tlist	*ft_lstnw(void *content)
 {
-	tt_list	*new_node;
+	t_tlist	*new_node;
 
-	new_node = (tt_list *)malloc(sizeof(tt_list));
+	new_node = (t_tlist *)malloc(sizeof(t_tlist));
 	if (!new_node)
 		return (0);
 	new_node->content = content;
@@ -52,7 +52,7 @@ tt_list	*ft_lstnw(void *content)
 	return (new_node);
 }
 
-int	ft_alloc_creat(tt_list *lst, char **new_buffer, char **buffer, int n)
+int	ft_alloc_creat(t_tlist *lst, char **new_buffer, char **buffer, int n)
 {
 	*new_buffer = malloc(n + 1);
 	n = create_str(*new_buffer, *buffer, n);
@@ -62,10 +62,10 @@ int	ft_alloc_creat(tt_list *lst, char **new_buffer, char **buffer, int n)
 	return (n);
 }
 
-void	ft_lstclr(tt_list **lst, void (*del)(void*))
+void	ft_lstclr(t_tlist **lst, void (*del)(void*))
 {
-	tt_list	*nxt;
-	tt_list	*current;
+	t_tlist	*nxt;
+	t_tlist	*current;
 
 	current = *lst;
 	while (current)
