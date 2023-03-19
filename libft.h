@@ -6,7 +6,7 @@
 /*   By: zeyad <zeyad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:28:05 by zh                #+#    #+#             */
-/*   Updated: 2023/03/19 12:40:29 by zeyad            ###   ########.fr       */
+/*   Updated: 2023/03/19 13:22:38 by zeyad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,4 +128,6 @@ char			*ft_concat(int n, ...);
 //algorithm
 
 int				ft_swap(void *it1, void *it2, int size);
+
+int				ft_reverse(void *start, void *end, int size);
 #endif
