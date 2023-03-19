@@ -6,7 +6,7 @@
 /*   By: zeyad <zeyad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:28:05 by zh                #+#    #+#             */
-/*   Updated: 2022/12/27 13:43:24 by zeyad            ###   ########.fr       */
+/*   Updated: 2023/03/19 12:40:29 by zeyad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,4 +124,8 @@ int				ft_min(int x, int y);
 int				ft_max(int x, int y);
 
 char			*ft_concat(int n, ...);
+
+//algorithm
+
+int				ft_swap(void *it1, void *it2, int size);
 #endif
