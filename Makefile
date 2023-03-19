@@ -58,7 +58,8 @@ SOURCE = 	ft_memset.c		\
 		ft_lstmap.c		\
 		ft_minmax.c		\
 		ft_concat.c		\
-		ft_utoa_radix.c
+		ft_utoa_radix.c		\
+		algorithm/ft_swap.c
 
 GNL_SOURCE =	get_next_line/get_next_line_bonus.c	\
 		get_next_line/get_next_line_utils_bonus.c
